@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ServiceController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>{{starship.name}} </h1>
+    <table>
+        <tbody> 
+            <tr>
+                <th>
+                    Name :
+                </th>
+                <td>
+                    {{starship.name}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Model :
+                </th>
+                <td>
+                    {{starship.model}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Manufacturer :
+                </th>
+                <td>
+                    {{starship.manufacturer}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Cost :
+                </th>
+                <td>
+                    {{starship.cost_in_credits}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Length :
+                </th>
+                <td>
+                    {{starship.length}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Crew :
+                </th>
+                <td>
+                    {{starship.crew}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Passengers :
+                </th>
+                <td>
+                    {{starship.passengers}}
+                </td>
+            </tr>  
+            <tr>
+                <th>
+                    Cargo capacity :
+                </th>
+                <td>
+                    {{starship.cargo_capacity}}
+                </td>
+            </tr>  
+            <tr>
+                <th>
+                    Consumables :
+                </th>
+                <td>
+                    {{starship.consumables}}
+                </td>
+            </tr>  
+            <tr>
+                <th>
+                    Hyperdrive rating :
+                </th>
+                <td>
+                    {{starship.hyperdrive_rating}}
+                </td>
+            </tr>  
+            <tr>
+                <th>
+                    MGLT :
+                </th>
+                <td>
+                    {{starship.MGLT}}
+                </td>
+            </tr>  
+            <tr>
+                <th>
+                    Class :
+                </th>
+                <td>
+                    {{starship.starship_class}}
+                </td>
+            </tr>    
+        </tbody>
+    </table>
+</div>
+{% endblock %}

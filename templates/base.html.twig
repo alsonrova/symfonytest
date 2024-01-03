@@ -8,7 +8,13 @@
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
         {% endblock %}
-
+        <style>
+            body{
+                background: #333;
+                color: #fff;
+            }
+        </style>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+Wy6p5JZMIoz8H9U4U2nN+1Aisk2nXwOggP" crossorigin="anonymous">
         {% block javascripts %}
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

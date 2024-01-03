@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ServiceController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>{{people.name}} </h1>
+    <table>
+        <tbody> 
+            <tr>
+                <th>
+                    Name :
+                </th>
+                <td>
+                    {{people.name}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Height :
+                </th>
+                <td>
+                    {{people.height}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Mass :
+                </th>
+                <td>
+                    {{people.mass}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Hair color :
+                </th>
+                <td>
+                    {{people.hair_color}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Skin color :
+                </th>
+                <td>
+                    {{people.skin_color}}
+                </td>
+            </tr>
+             <tr>
+                <th>
+                    Eye color :
+                </th>
+                <td>
+                    {{people.eye_color}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Birthyear :
+                </th>
+                <td>
+                    {{people.birth_year}}
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Gender :
+                </th>
+                <td>
+                    {{people.gender}}
+                </td>
+            </tr>
+            
+            
+        </tbody>
+    </table>
+</div>
+{% endblock %}

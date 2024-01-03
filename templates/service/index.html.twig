@@ -1,0 +1,115 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ServiceController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>StarWars Wikia ! </h1>
+
+    Bienvenue, jeune padawan, sur notre holonet dédié aux mystères infinis de la galaxie lointaine. Que la Force soit avec toi alors que tu t'aventures dans les méandres de l'actualité stellaire. Explore les échos de Tatooine aux confins de l'Outer Rim, découvre les secrets des Jedi et des Sith, et que les étoiles te guident à travers cette galaxie passionnante. Que tes voyages virtuels soient aussi palpitants qu'un duel au sabre laser, et puisses-tu toujours trouver la sagesse comme un Jedi et la détermination comme un chasseur de primes. Que la Force t'accompagne dans cette quête d'informations interstellaires ! 🌌🌠
+    
+    <div>
+        <h2>
+            People 
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th>Link</th>
+                    <th>Name</th>
+                
+                </tr>
+            </thead>
+            <tbody>             
+                {% for people in peoples %}
+                {% set peopleID = people.url|replace({'https://swapi.dev/api/people/': '', '/': ''}) %}
+                <tr>
+                    <td><a href="{{ path('app_service_people', { 'id': peopleID }) }}">More</a></td>
+                    <td>{{people.name}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <h2>
+            Planets
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th>Link</th>
+                    <th>Name</th>
+                
+                </tr>
+            </thead>
+            <tbody>             
+                {% for planet in planets %}
+                {% set planetID = planet.url|replace({'https://swapi.dev/api/planets/': '', '/': ''}) %}
+                <tr>
+                    <td><a href="{{ path('app_service_planet', { 'id': planetID }) }}">More</a></td>
+                    <td>{{planet.name}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    
+    <div>
+        <h2>
+            Starships
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th>Link</th>
+                    <th>Name</th>
+                
+                </tr>
+            </thead>
+            <tbody>             
+                {% for starship in starships %}
+                {% set starshipId = starship.url|replace({'https://swapi.dev/api/starships/': '', '/': ''}) %}
+                <tr>
+                    <td><a href="{{ path('app_service_starship', { 'id': starshipId }) }}">More</a></td>
+                    <td>{{starship.name}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>
+            Films
+        </h2>
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th>Link</th>
+                    <th>Name</th>
+                
+                </tr>
+            </thead>
+            <tbody>             
+                {% for film in films %}
+                {% set filmID = film.url|replace({'https://swapi.dev/api/films/': '', '/': ''}) %}
+                <tr>
+                    <td><a href="{{ path('app_service_film', { 'id': filmID }) }}">More</a></td>
+                    <td>{{film.title}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
